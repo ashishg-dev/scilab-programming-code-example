@@ -13,7 +13,7 @@ http://www.scilab.org/download
 This code is total for the beginner or for those who are in college for their practical.
 
 List of code available.
-1 - To Display Value of a polynomial-I
+1 - To Display Value of a polynomial-I<br/>
 2 - To Display Value of a polynomial-II
 3 - Bisection method
 4 - Newton Raphson Method
