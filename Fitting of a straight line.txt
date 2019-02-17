@@ -1,0 +1,17 @@
+Fitting of a straight line
+clc
+funcprot(0)
+n=input(“enter no. of data”)
+labels=["x";"y"]
+[ok, x, y]= getvalue(“enter data points”,labels,list(“row”,n,”row”,n))
+sx = sum(x)
+sy = sum(y)
+sxy=sum(x.*y)
+sx2=sum(x^2)
+D= det([n sx;sx sx2])
+Da = det([sy sx;sxy sx2])
+Db = det([n sy;sx sxy])
+a=Da/D
+b=Db/D
+disp(“y=”)
+disp(poly([a b],’x',’c'))

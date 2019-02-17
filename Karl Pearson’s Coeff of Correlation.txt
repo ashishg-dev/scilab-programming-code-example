@@ -1,0 +1,8 @@
+To display Karl Pearson’s Coeff of Correlation
+clc
+funcprot(0)
+n=input(“enter no. of data”)
+labels=["x";"y"]
+[ok, x, y]= getvalue(“enter data points”,labels,list(“row”,n,”row”,n))
+r = correl(x,y,eye(n,n))
+disp(r,”coefficient of correlation is “)

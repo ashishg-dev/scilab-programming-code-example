@@ -1,0 +1,19 @@
+Simpson’s 3/8th rule ( (x)^2+3*x+1 )
+clc
+funcprot(0)
+a=input(“Enter lower limit : “)
+b=input(“Enter upper limit : “)
+n=input(“Enter no of interval :”)
+h=(b-a)/n
+function [f]=y(x)
+f=((x)^2+3*x+1)
+endfunction
+sum= y(a)+y(b);
+for i=1:n-1
+if (modulo(i,3)==0) then
+sum=sum+(2*y(a+i*h));
+else
+sum=sum+(3*y(a+i*h));
+end;
+end;
+printf(“value of integral is %f”,sum*(3*h)/8);

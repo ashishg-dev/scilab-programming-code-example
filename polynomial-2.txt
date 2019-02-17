@@ -1,0 +1,10 @@
+To Display Value of a polynomial-II
+clc
+n = input(“Enter a degree of polynomial”)
+c = zeros(1,n+1)
+for i = 1:n+1
+c(i)= input(“Enter coeff “)
+end
+x = input(“enter a value of x”)
+p = poly(c,’x',’c')
+disp(horner(p,x),”value of the polynomial is”)

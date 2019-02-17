@@ -1,0 +1,15 @@
+To display covariance of a data
+clc
+funcprot(0)
+n = input(“Enter no. of data:-”)
+labels=["x";"y"]
+[ok,x,y] = getvalue(“Enter data points”,labels,list(“row”,n,”row”,n))
+xy = (x.*y)
+sumxy=sum(xy)
+sumx = sum(x)
+sumy = sum(y)
+x1=(sum(x)/n)
+y1=(sum(y)/n)
+cov(x,y) = (sum(xy)/n)-(x1.*y1)
+disp(cov(x,y))
+if cov(x,y) end

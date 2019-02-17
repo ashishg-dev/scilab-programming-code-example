@@ -1,0 +1,26 @@
+Newtons forward interpolation-ii (to find polynomial)
+clc
+funcprot(0)
+n=input(“enter no. of data”)
+labels=["x";"y"]
+[ok, x, y]= getvalue(“enter data points”,labels,list(“row”,n,”row”,n))
+h = x(2)-x(1)
+z = poly(0,’x')
+k = (z-x(1))/h
+sum = y(1)
+for i=1:n-1
+for j=1:n-i
+d(i,j)=y(j+1)-y(j)
+end
+for j=1:n-i
+y(j)=d(i,j)
+end
+end
+for i=2:n
+product =1
+for j=1:i-1
+product = (k+1-j)*product/j
+end
+sum = sum + product*d(i-1,1)
+end
+disp(sum)

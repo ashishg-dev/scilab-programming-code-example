@@ -1,0 +1,12 @@
+To Display Value of a polynomial-I
+clc
+n= input(“enter degree of the polynomial “)
+for i=1:n+1
+a(i)=input(“enter coefficient “)
+end
+x=input(“enter value of x “)
+sum=0
+for i=1:n+1
+sum=sum+ a(i)*x^(i-1)
+end
+disp(sum)

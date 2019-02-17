@@ -1,0 +1,15 @@
+Trapezoidal rule for (sin(x))^2/(5+4*cos(x))
+clc
+funcprot(0)
+a=input(“Enter lower limit : “)
+b=input(“Enter upper limit : “)
+n=input(“Enter no of interval :”)
+h=(b-a)/n
+function[f]= y(x)
+f= (sin(x))^2/(5+4*cos(x))
+endfunction
+sum= y(a)+y(b)
+for i=1:n-1
+sum=sum+ 2*y(a+i*h)
+end
+printf(“value of integral is %f”,sum*h/2)

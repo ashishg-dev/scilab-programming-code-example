@@ -1,0 +1,23 @@
+Runge Kuttaa Method
+Let dy/dx = 1+y^2
+clc
+funcprot(0)
+x(1)= input(“enter value of x in initial guess”)
+y(1)= input(“enter value of y in iniial guess”)
+w = input(“enter value of unknown x”)
+h = input(“enter step size”)
+z= input(“enter 2 for second order or 4 for fourth order”)
+deff(“[z]=f(x,y)”,”z=1+y^2?)
+if z==2 then
+k1=h*f(x(1),y(1))
+k2=h*f(x(1)+h,y(1)+k1)
+y=y(1)+0.5*(k1+k2)
+disp(y)
+else
+k1=h*f(x(1),y(1))
+k2=h*f(x(1)+h/2,y(1)+k1/2)
+k3=h*f(x(1)+h/2,y(1)+k2/2)
+k4=h*f(x(1)+h,y(1)+k3)
+y=y(1)+(1/6)*(k1+2*k2+2*k3+k4)
+disp(y)
+end

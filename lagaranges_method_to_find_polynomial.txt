@@ -1,0 +1,24 @@
+lagarange’s method to find polynomial
+clc
+funcprot(0)
+n= input(“no. of data :”)
+for i=1:n
+printf(“Enter x%d value”,i)
+x(i)=input(“”)
+printf(” Enter y%d value”,i)
+y(i)=input(“”)
+
+end
+a=poly(0,’x')
+sum=0
+for i=1:n
+product=1
+for j=1:n
+if j==i then continue
+end
+product=product*(a-x(j))/(x(i)-x(j))
+end
+product=product*y(i)
+sum=sum + product
+end
+disp(sum)

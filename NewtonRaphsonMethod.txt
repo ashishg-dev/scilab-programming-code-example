@@ -1,0 +1,19 @@
+Newton Raphson Method
+clc
+n= input(“enter degree of the polynomial “)
+c = zeros(1,n+1)
+for i=1:n+1
+c(i)=input(“enter coefficient “)
+end
+p = poly(c,’x',’c')
+x0=input(“initial guess “)
+k=input(“enter no of iterations”)
+deff(“[y]=f(x)”,”y=horner(p,x)”)
+deff(“[y]=df(x)”,”y=horner(derivat(p),x)”)
+j=1
+while (j<=k)
+x1= x0 – f(x0)/df(x0)
+j=j+1
+x0=x1
+end
+disp(x1,”approximate root in numerical method is “)

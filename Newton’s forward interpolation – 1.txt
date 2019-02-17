@@ -1,0 +1,25 @@
+Newton’s forward interpolation – I
+clc
+funcprot(0)
+n=input(“enter no. of data”)
+p=x_matrix(‘enter a data’,zeros(2,n))
+a = input(“enter unknown value of x”)
+h = p(1,2)-p(1,1)
+k = (a-p(1,1))/h
+sum = p(2,1)
+for i=1:n-1
+for j=1:n-i
+d(i,j)=p(2,j+1)-p(2,j)
+end
+for j=1:n-i
+p(2,j)=d(i,j)
+end
+end
+for i=2:n
+product =1
+for j=1:i-1
+product = (k+1-j)*product/j
+end
+sum = sum + product*d(i-1,1)
+end
+disp(sum)

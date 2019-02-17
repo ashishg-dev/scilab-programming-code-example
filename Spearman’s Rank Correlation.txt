@@ -1,0 +1,21 @@
+To display Spearman’s Rank Correlation
+clc
+funcprot(0)
+n=input(“enter no. of data”)
+labels=["x";"y"]
+[ok, x, y]= getvalue(“enter data points”,labels,list(“row”,n,”row”,n))
+sx = gsort(x)
+sy = gsort(y)
+for i=1:n
+for j=1:n
+if x(i)==sx(j) then rx(i)=j
+end
+end
+for j=1:n
+if y(i)==sy(j) then ry(i)=j
+end
+end
+end
+d = rx – ry
+R=1-(6*sum(d^2))/(n^3-n)
+disp(R,”coefficient of Rank correlation is “)

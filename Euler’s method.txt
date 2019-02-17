@@ -1,0 +1,14 @@
+Euler’s method
+Let dy/dx = x+3y
+clc
+x(1)= input(“enter value of x in initial guess”)
+y(1)= input(“enter value of y in initial guess”)
+w = input(“enter value of unknown x”)
+h = input(“enter step size”)
+deff(“[z]=f(x,y)”,”z=x+3*y”)
+n=(w-x(1))/h
+for i=2:n+1
+x(i)=x(i-1)+h
+y(i)=y(i-1)+h*f(x(i-1),y(i-1))
+end
+disp(y(n+1))

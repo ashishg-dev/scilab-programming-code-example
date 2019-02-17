@@ -1,0 +1,16 @@
+Cramers Rule for 2by2 system
+clc
+funcprot(0)
+a1=input(“Enter coff of x in 1st eqn “)
+b1=input(“Enter coff of y in ast eqn “)
+c1=input(“Enter constant term in 1st eqn “)
+a2=input(“Enter coff of x in 2nd eqn “)
+b2=input(“Enter coff of y in 2nd eqn “)
+c2=input(“Enter constant term in 2nd eqn “)
+D=det([a1 b1;a2 b2])
+DX=det([c1 b1;c2 b2])
+DY=det([a1 c1;a2 c2])
+x=DX/D
+y=DY/D
+disp(x,”Value of x is”)
+disp(y,”Value of y is”)
